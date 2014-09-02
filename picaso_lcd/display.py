@@ -636,7 +636,7 @@ class DisplayTouch(object):
         :type column: int
 
         """
-        self.d.write_cmd([0xff39, line, column])
+        self.d.write_cmd([0xff39, x1, y1, x2, y2])
 
     def set_mode(self, mode):
         """
@@ -655,7 +655,7 @@ class DisplayTouch(object):
         :type mode: int
 
         """
-        self.d.write_cmd([0xff39, mode])
+        self.d.write_cmd([0xff38, mode])
 
     def get_status(self, mode):
         """
